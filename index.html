@@ -9,12 +9,12 @@
   <meta name="robots" content="index, follow">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- JSON-LD structured data for WebPage and FAQ -->
+  <!-- JSON-LD structured data for WebPage, Games and FAQ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "GrowRoll Demo",
+    "name": "GrowRoll",
     "url": "https://playgrowroll.github.io/",
     "description": "Play demo Growtopia gambling games including Crash, Mines, Case Battles, Blackjack, Roll, and Cases.",
     "publisher": {
@@ -24,27 +24,66 @@
     "mainEntity": [
       {
         "@type": "Game",
-        "name": "Crash"
+        "name": "Crash",
+        "url": "https://growroll.bot.nu/crash"
       },
       {
         "@type": "Game",
-        "name": "Mines"
+        "name": "Mines",
+        "url": "https://growroll.bot.nu/mines"
       },
       {
         "@type": "Game",
-        "name": "Case Battles"
+        "name": "Case Battles",
+        "url": "https://growroll.bot.nu/battles"
       },
       {
         "@type": "Game",
-        "name": "Blackjack"
+        "name": "Blackjack",
+        "url": "https://growroll.bot.nu/blackjack"
       },
       {
         "@type": "Game",
-        "name": "Roll"
+        "name": "Roll",
+        "url": "https://growroll.bot.nu/roll"
       },
       {
         "@type": "Game",
-        "name": "Cases"
+        "name": "Cases",
+        "url": "https://growroll.bot.nu/unbox"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is GrowRoll?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GrowRoll is a demo Growtopia gambling website where you can try games like Crash, Mines, Case Battles, Blackjack, Roll, and Cases for fun."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need real money to play?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, GrowRoll is fully for fun and testing purposes. No deposits or withdrawals are required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which games are available?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Crash, Mines, Case Battles, Blackjack, Roll, and Cases."
+        }
       }
     ]
   }
@@ -59,23 +98,23 @@
     }
 
     body {
-      background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+      background: linear-gradient(135deg, #1a1a2e 0%, #162447 100%);
       color: #fff;
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: center;
       padding: 20px;
     }
 
     .container {
-      background: rgba(0,0,0,0.7);
-      padding: 40px;
+      background: rgba(0,0,0,0.9);
+      padding: 50px 30px;
       border-radius: 20px;
-      max-width: 600px;
+      max-width: 750px;
       width: 100%;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+      text-align: center;
       animation: fadeIn 1s ease-in-out;
     }
 
@@ -85,89 +124,80 @@
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
     }
 
     p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       margin-bottom: 30px;
-      line-height: 1.6;
+      line-height: 1.7;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
 
-    ul {
-      text-align: left;
-      margin-bottom: 30px;
-      padding-left: 20px;
+    .games {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
     }
 
-    ul li {
-      margin-bottom: 10px;
-      font-weight: 500;
-    }
-
-    .btn {
-      display: inline-block;
+    .game-btn {
       background: #FFD700;
       color: #000;
       font-weight: 700;
-      padding: 15px 40px;
-      border-radius: 10px;
+      padding: 15px 30px;
+      border-radius: 12px;
       text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #FFC200;
-      transform: translateY(-3px);
+      font-size: 1rem;
+      min-width: 140px;
+      text-align: center;
+      transition: all 0.3s ease, transform 0.3s ease;
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
 
+    .game-btn:hover {
+      background: #FFC200;
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
     footer {
-      margin-top: 40px;
+      margin-top: 30px;
       font-size: 0.9rem;
-      opacity: 0.7;
+      opacity: 0.8;
     }
 
     @media (max-width: 480px) {
       h1 {
         font-size: 2rem;
       }
-      h2 {
-        font-size: 1.5rem;
-      }
       p {
         font-size: 1rem;
       }
-      .btn {
-        padding: 12px 30px;
+      .game-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        min-width: 120px;
       }
     }
   </style>
 </head>
 <body>
   <main class="container">
-    <h1>Welcome to GrowRoll</h1>
-    <p>Try our fully demo Growtopia gambling website! Play and explore all the fun games below:</p>
-    
-    <section>
-      <h2>Available Games</h2>
-      <ul>
-        <li><a href="#crash" title="Play Crash game">Crash</a></li>
-        <li><a href="#mines" title="Play Mines game">Mines</a></li>
-        <li><a href="#case-battles" title="Play Case Battles">Case Battles</a></li>
-        <li><a href="#blackjack" title="Play Blackjack game">Blackjack</a></li>
-        <li><a href="#roll" title="Play Roll game">Roll</a></li>
-        <li><a href="#cases" title="Play Cases game">Cases</a></li>
-      </ul>
-    </section>
+    <h1>Welcome to GrowRoll Demo</h1>
+    <p>Play demo Growtopia gambling games for fun! Click a game below to start playing:</p>
 
-    <a href="https://growroll.bot.nu/" class="btn" target="_blank" rel="noopener">Click here to play now!</a>
+    <div class="games">
+      <a href="https://growroll.bot.nu/crash" class="game-btn" target="_blank" rel="noopener">Crash</a>
+      <a href="https://growroll.bot.nu/mines" class="game-btn" target="_blank" rel="noopener">Mines</a>
+      <a href="https://growroll.bot.nu/battles" class="game-btn" target="_blank" rel="noopener">Case Battles</a>
+      <a href="https://growroll.bot.nu/blackjack" class="game-btn" target="_blank" rel="noopener">Blackjack</a>
+      <a href="https://growroll.bot.nu/roll" class="game-btn" target="_blank" rel="noopener">Roll</a>
+      <a href="https://growroll.bot.nu/unbox" class="game-btn" target="_blank" rel="noopener">Cases</a>
+    </div>
 
     <footer>
       &copy; 2025 GrowRoll — For fun and demo purposes only
